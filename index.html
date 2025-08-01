@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -61,30 +62,47 @@
         <div class="skills-container">
             <h2 class="section-title">Skills I'm Learning</h2>
             
-            <div class="skills-grid">
-                <div class="skill-card">
-                    <i class="fab fa-html5"></i>
-                    <span>HTML</span>
+            <div class="skills-categories">
+                <div class="skills-category">
+                    <h3 class="category-title">Frontend</h3>
+                    <div class="skills-grid">
+                        <div class="skill-card" data-aos="fade-up" data-aos-delay="0">
+                            <i class="fab fa-html5"></i>
+                            <span>HTML</span>
+                        </div>
+                        <div class="skill-card" data-aos="fade-up" data-aos-delay="100">
+                            <i class="fab fa-css3-alt"></i>
+                            <span>CSS</span>
+                        </div>
+                        <div class="skill-card" data-aos="fade-up" data-aos-delay="200">
+                            <i class="fab fa-js"></i>
+                            <span>JavaScript</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="skill-card">
-                    <i class="fab fa-css3-alt"></i>
-                    <span>CSS</span>
+
+                <div class="skills-category">
+                    <h3 class="category-title">Backend</h3>
+                    <div class="skills-grid">
+                        <div class="skill-card" data-aos="fade-up" data-aos-delay="300">
+                            <i class="fab fa-python"></i>
+                            <span>Python</span>
+                        </div>
+                        <div class="skill-card" data-aos="fade-up" data-aos-delay="400">
+                            <i class="fab fa-git-alt"></i>
+                            <span>Git</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="skill-card">
-                    <i class="fab fa-js"></i>
-                    <span>JavaScript</span>
-                </div>
-                <div class="skill-card">
-                    <i class="fab fa-python"></i>
-                    <span>Python</span>
-                </div>
-                <div class="skill-card">
-                    <i class="fab fa-git-alt"></i>
-                    <span>Git</span>
-                </div>
-                <div class="skill-card">
-                    <i class="fab fa-react"></i>
-                    <span>React</span>
+
+                <div class="skills-category">
+                    <h3 class="category-title">Frameworks</h3>
+                    <div class="skills-grid">
+                        <div class="skill-card" data-aos="fade-up" data-aos-delay="500">
+                            <i class="fab fa-react"></i>
+                            <span>React</span>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -98,5 +116,6 @@
         </div>
     </section>
 </body>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script src="script.js"></script>
 </html>

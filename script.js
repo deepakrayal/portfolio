@@ -68,6 +68,15 @@ class QuoteRotator {
     }
 }
 
+// Init AOS
+document.addEventListener('DOMContentLoaded', () => {
+    AOS.init({
+        duration: 800,
+        once: true,
+        offset: 100
+    });
+});
+
 // Init on DOM Load
 document.addEventListener('DOMContentLoaded', init);
 
