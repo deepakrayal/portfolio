@@ -49,21 +49,19 @@ class TypeWriter {
 }
 
 class QuoteRotator {
-    constructor(element, quotes, wait = 5000) {
+    constructor(element, quotes, wait = 8000) {
         this.element = element;
         this.quotes = quotes;
         this.wait = wait;
         this.current = 0;
+        // Set initial quote immediately
+        this.element.textContent = this.quotes[0];
         this.rotate();
     }
 
     rotate() {
-        this.element.style.opacity = '0';
-        setTimeout(() => {
-            this.element.textContent = this.quotes[this.current];
-            this.element.style.opacity = '1';
-            this.current = (this.current + 1) % this.quotes.length;
-        }, 500);
+        this.current = (this.current + 1) % this.quotes.length;
+        this.element.textContent = this.quotes[this.current];
         setTimeout(() => this.rotate(), this.wait);
     }
 }
@@ -94,12 +92,14 @@ function init() {
     const aboutIntro = document.getElementById('about-intro');
     aboutIntro.textContent = "Hi, I'm Alex, a 3rd Year CSE student passionate about AI and Web Dev.";
 
-    // Initialize quote rotator
+    // Initialize quote rotator with simple text content
     const quoteElement = document.getElementById('rotating-quote');
-    const quotes = [
-        '"The only way to do great work is to love what you do." - Steve Jobs',
-        '"Innovation distinguishes between a leader and a follower." - Steve Jobs',
-        '"Learning never exhausts the mind." - Leonardo da Vinci'
-    ];
-    new QuoteRotator(quoteElement, quotes);
+    if (quoteElement) { // Check if element exists
+        const quotes = [
+            '"Innovation distinguishes between a leader and a follower." - Steve Jobs',
+            '"The only way to do great work is to love what you do." - Steve Jobs',
+            '"In the middle of difficulty lies opportunity." - Albert Einstein'
+        ];
+        new QuoteRotator(quoteElement, quotes, 8000);
+    }
 }

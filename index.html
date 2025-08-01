@@ -42,19 +42,56 @@
     </header>
 
     <section id="about">
+        <!-- Floating dots -->
+        <div class="floating-dots">
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+        </div>
+        
+        <!-- Morphing shapes -->
+        <div class="morphing-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+        </div>
+
         <div class="about-container">
-            <div class="profile-image-container">
-                <img src="images/image-8-1024x1024.png" alt="Profile picture of Alex" class="profile-image">
-            </div>
-            <div class="about-content">
-                <div class="about-text">
-                    <p id="about-intro" class="fade-in"></p>
+            <h2 class="about-title" data-aos="fade-down">
+                <span>Know</span>
+                <span>Me</span>
+                <span>Better</span>
+            </h2>
+
+            <div class="profile-section" data-aos="fade-up">
+                <div class="profile-image-container">
+                    <div class="rotating-border"></div>
+                    <img src="images/image-8-1024x1024.png" alt="Profile picture of Alex" class="profile-image">
                 </div>
-                <div class="quote-container">
-                    <p id="rotating-quote"></p>
-                </div>
-                <a href="resume.pdf" class="download-btn" download>Download Resume</a>
             </div>
+
+            <div class="intro-text" data-aos="fade-up" data-aos-delay="200">
+                Hi, I'm <span class="highlight">Alex</span>, a 3rd Year CSE student passionate about <span class="highlight">AI</span> and <span class="highlight">Web Dev</span>
+            </div>
+
+            <div class="quote-card" data-aos="fade-up" data-aos-delay="400">
+                <div class="quote-content">
+                    <span class="sparkle">✨</span>
+                    <p id="rotating-quote" class="quote-text"></p>
+                    <span class="sparkle">✨</span>
+                    <div class="shine"></div>
+                </div>
+            </div>
+
+            <a href="resume.pdf" class="download-btn" data-aos="fade-up" data-aos-delay="600" download>
+                <span class="btn-icon">📄</span>
+                Download Resume
+            </a>
         </div>
     </section>
 
